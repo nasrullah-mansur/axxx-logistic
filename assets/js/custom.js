@@ -1,6 +1,10 @@
 $(document).ready(function() {
     "use strict";
 
+    $('.header .header-content .mobile').on('click', function() {
+      $('.header .header-content .list').slideToggle(150);
+    })
+
     new WOW().init();
 
     $('.gallery .gallery-slider').slick({
@@ -15,17 +19,16 @@ $(document).ready(function() {
         nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>',
         responsive: [
           {
-            breakpoint: 600,
+            breakpoint: 991.98,
             settings: {
               slidesToShow: 2,
-              slidesToScroll: 2
             }
           },
           {
-            breakpoint: 480,
+            breakpoint: 767.98,
             settings: {
               slidesToShow: 1,
-              slidesToScroll: 1
+              infinite: true,
             }
           }
         ]
